@@ -1,4 +1,4 @@
-import { fire } from "./lib/command";
+import { fire } from "./command";
 
 /**
  * This is the main function, it's executed once the rest
