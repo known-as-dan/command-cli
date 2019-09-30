@@ -2,18 +2,21 @@
   "name": "command-cli",
   "version": "1.0.0",
   "description": "A simple command-line framework for handling command execution within your node application.",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "repository": "https://github.com/known-as-dan/command-cli.git",
   "author": "known-as-dan",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "execute": "node dist/index.js",
+    "execute": "node dist/main.js",
     "build": "tsc",
     "start": "yarn build && yarn execute"
   },
   "devDependencies": {
-    "@types/node": "^12.7.8",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.7.8"
   }
 }
