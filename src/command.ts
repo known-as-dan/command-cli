@@ -91,7 +91,7 @@ function getCommands(): Array<Command> {
  * @param identifier Command identifier.
  * @param name Command name(Optional).
  */
-function getCommand(identifier: string, name?: string): Command {
+function getCommand(identifier: string, name?: string): Command | null {
 	const commands = getCommands();
 	let command: Command;
 	let command_identifier: string;
@@ -153,9 +153,15 @@ export function fire(command_identifier: string, args?: Array<string>): void {
 	} else {
 		args = args || []; // Setting "args" to default to an empty array if it wasn't passed.
 
-		// Finding the specified command by its identifier and executing it with the passed arguments
-		const command = getCommand(command_identifier);
-		command.execute(args);
+		// Finding the specified command by its identifier and executing it with the passed arguments.
+		// If the named command wasn't found, an error message is printed out into the console.
+		const command: Command | null = getCommand(command_identifier);
+		if (command instanceof Command) {
+			command.execute(args);
+		} else {
+			const message: string = `Could not find a command named '${command_identifier}'!`;
+			console.log(message);
+		}
 	}
 }
 

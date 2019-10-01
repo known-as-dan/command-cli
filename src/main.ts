@@ -1,4 +1,6 @@
-import { fire } from "./command";
+import { fire, Command } from "./command";
+
+export { fire, Command };
 
 /**
  * This is the main function, it's executed once the rest
@@ -11,9 +13,9 @@ function main(args: Array<string>): number {
 	// First two are generally just node and the javascript
 	// file, so we're looking for more than that(2).
 	if (args.length > 2) {
-		const command: string = args[2];
+		const called_command: string = args[2];
 		args.splice(0, 3); // Slicing out the initial two arguments(node and js file) and the command, leaving only the arguments.
-		fire(command, args); // Firing the command and passing the left-over arguments to it.
+		fire(called_command, args); // Firing the command and passing the left-over arguments to it.
 	} else {
 		fire("help"); // Firing the "help" command to print out all available commands if no command was used.
 	}
