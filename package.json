@@ -1,6 +1,6 @@
 {
   "name": "@known-as-dan/command",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Command is a simple framework for handling command execution within your node application.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
