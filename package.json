@@ -1,7 +1,7 @@
 {
   "name": "@known-as-dan/command",
-  "version": "1.0",
-  "description": "A simple command-line framework for handling command execution within your node application.",
+  "version": "1.0.0",
+  "description": "Command is a simple framework for handling command execution within your node application.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "repository": "https://github.com/known-as-dan/command-npm.git",
