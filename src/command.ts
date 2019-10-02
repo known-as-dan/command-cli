@@ -84,7 +84,7 @@ function getCommand(identifier?: string, name?: string): Command | null {
 }
 
 /**
- * 
+ * Initialize command processing.
  * @param help Set whether or not you want the program to automatically
  * print out the list of available commands, if no command was used.
  * This is "true" by default. (Optional)
@@ -92,8 +92,10 @@ function getCommand(identifier?: string, name?: string): Command | null {
  * but by default, the program will use "process.argv". (Optional)
  */
 export function init(print_help?: boolean, args?: Array<string>): void {
-	print_help = print_help || true; // "print_help" defaults to "true".
-	
+	if (print_help != false) {
+		print_help = true;
+	}
+
 	if (args) {
 		if (args.length > 0) {
 			const called_command = args[0]
