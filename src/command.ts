@@ -5,7 +5,6 @@ interface CommandInterface {
 	commandFunction(args: Array<string>): void;
 }
 
-let commands: Array<Command> = [];
 export class Command implements CommandInterface {
 	name: string;
 	identifier: string;
@@ -52,6 +51,7 @@ export class Command implements CommandInterface {
 		func(args);
 	}
 }
+let commands: Array<Command> = [];
 
 function getAllCommands(): Array<Command> {
 	return commands;
@@ -64,10 +64,6 @@ function getAllCommands(): Array<Command> {
  * @param name Command name. (Optional)
  */
 function getCommand(identifier?: string, name?: string): Command | null {
-	if (!(identifier && name)) {
-		return null;
-	}
-
 	identifier = identifier || "";
 	name = name || "";
 
@@ -152,7 +148,7 @@ export function help(): void {
 		console.log(" - There are no commands!");
 	}
 
-	console.log("\n")
+	console.log() // Spacing.
 }
 
 /**
