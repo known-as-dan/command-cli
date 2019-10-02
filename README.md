@@ -3,7 +3,7 @@ Command is a simple framework for handling command execution within your node ap
 
 # Usage
 Recreating the common "echo" command using Command & Typescript:
-```Typescript
+```typescript
 import { Command, init } from "@known-as-dan/command";
 
 new Command("echo", "<message>", "Send a message.", (args: Array<string>) => {
