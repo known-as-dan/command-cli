@@ -1,5 +1,5 @@
 {
-  "name": "@known-as-dan/command-cli",
+  "name": "@known-as-dan/command",
   "version": "1.0.0",
   "description": "A simple command-line framework for handling command execution within your node application.",
   "main": "dist/main.js",
