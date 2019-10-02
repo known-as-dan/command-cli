@@ -4,7 +4,7 @@
   "description": "A simple command-line framework for handling command execution within your node application.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "repository": "https://github.com/known-as-dan/command-cli.git",
+  "repository": "https://github.com/known-as-dan/command-npm.git",
   "author": "known-as-dan",
   "license": "MIT",
   "private": false,
