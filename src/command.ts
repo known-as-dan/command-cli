@@ -1,11 +1,4 @@
-interface CommandInterface {
-	identifier: string;
-	usage: string;
-	description: string;
-	commandFunction(args: Array<string>): void;
-}
-
-export class Command implements CommandInterface {
+export class Command {
 	identifier: string;
 	usage: string;
 	description: string;
